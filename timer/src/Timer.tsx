@@ -18,7 +18,14 @@ const Timer = ({title, endTime, elapsedTime}: TimerProps)=>{
         let interval:NodeJS.Timeout
         if(isStarted && timeLeft>0){
             interval = setInterval(()=>{
-                setTimeLeft((time)=>time-1)
+                setTimeLeft((time)=>{
+                    if(time<=1){
+                        clearInterval(interval);
+                        setIsStarted(false);
+                        return 0;
+                    }
+                    return time-1
+                })
                 setElapsed((time)=>time+1)
             }, 1000)
         }
