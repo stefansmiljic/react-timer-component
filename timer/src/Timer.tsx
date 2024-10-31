@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import styles from "./Timer.module.css"
+
 interface TimerProps{title:string, endTime:number, elapsedTime?:number}
 
 const Timer = ({title, endTime, elapsedTime}: TimerProps)=>{
@@ -47,13 +49,19 @@ const Timer = ({title, endTime, elapsedTime}: TimerProps)=>{
         setIsStarted(false)
     }
 
-    return <div>
-        <p>{title}</p>
-        <p>{elapsedTimeMinutes}:{elapsedTimeSeconds}</p>
-        <p>{minutesLeft}:{secondsLeft}</p>
-        <button onClick={startHandle}>Start</button>
-        <button onClick={pauseHandle}>Pause</button>
-        <button onClick={resetHandle}>Reset</button>
+    return <div className={styles.timer}>
+        <circle cx="125" cy="125" r="80" fill="#67cb88">
+            <circle cx="125" cy="125" r="75">
+                <div>
+                    <p className={styles.subtext}>{title}</p>
+                    <p className={styles.maintext}>{elapsedTimeMinutes}:{elapsedTimeSeconds}</p>
+                    <p className={styles.subtext}>{minutesLeft}:{secondsLeft}</p>
+                </div>
+            </circle>
+        </circle>
+        <button onClick={startHandle} className={styles.button}>Start</button>
+        <button onClick={pauseHandle} className={styles.button}>Pause</button>
+        <button onClick={resetHandle} className={styles.button}>Reset</button>
     </div>
 }
 export default Timer

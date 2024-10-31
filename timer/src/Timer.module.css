@@ -1,0 +1,41 @@
+body{
+    background-color: #000000;
+}
+
+.timer{
+    border-radius: 25px;
+    padding: 70px;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    background-color: #26273d
+}
+
+.button{
+    border-radius: 20%;
+    border: 2px solid;
+    background-color: #26273d;
+    border-color: #606170;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.maintext{
+    color:#ffffff;
+}
+
+.subtext{
+    color:#a2a4cb
+}
+
+.circle{
+    
+}
+
+.innercircle{
+
+}
+
+.outercircle{
+
+}
