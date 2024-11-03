@@ -73,5 +73,4 @@ body{
 
 .timer_complete{
     animation: color_pulse 1s linear infinite;
-    fill: red;
 }
