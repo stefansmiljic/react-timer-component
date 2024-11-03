@@ -5,7 +5,7 @@ import Timer from './Timer';
 function App() {
   return (
     <div className="App">
-      <Timer title={"My Timer"} endTime={152} elapsedTime={13} />
+      <Timer title={"My Timer"} endTime={5} elapsedTime={0} />
     </div>
   );
 }

@@ -1,41 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.open-sans{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
 body{
     background-color: #000000;
 }
 
-.timer{
+.timer_container{
+    position: relative;
     border-radius: 25px;
     padding: 70px;
     margin: auto;
-    height: 250px;
+    height: 300px;
     width: 250px;
     background-color: #26273d
 }
 
-.button{
-    border-radius: 20%;
+.timer_controls{
+    display: flex;
+    justify-content: center;
+}
+
+.timer_controls button{
+    padding: 10px 0px;
+    border-radius: 25px;
     border: 2px solid;
     background-color: #26273d;
     border-color: #606170;
     cursor: pointer;
     color: #ffffff;
+    width: 33%;
+    height: 10%;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
-.maintext{
+.timer_text{
     color:#ffffff;
+    font-size: 30px;   
 }
 
-.subtext{
-    color:#a2a4cb
+.other_text{
+    color:#a2a4cb;
 }
 
-.circle{
-    
+.timer_content{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    align-content: center;
+    font-family: 'Open Sans';
 }
 
-.innercircle{
-
+.svg_circle{
+    transform: rotate(-90deg);
 }
 
-.outercircle{
+@keyframes color_pulse{
+    0% { stroke: #67cb88 }
+    50% { stroke: #cb6767 }
+    100% { stroke: #67cb88}
+}
 
+.timer_complete{
+    animation: color_pulse 1s linear infinite;
+    fill: red;
 }
