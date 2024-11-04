@@ -9,6 +9,7 @@ const Timer = ({title, endTime, elapsedTime}: TimerProps)=>{
     if(endTime>3599){
         throw new Error("Maximum allowed time is 1 hour.")
     }
+    if(elapsedTime && elapsedTime>endTime){ throw new Error("Elapsed time must be shorter than end time!")}
     const difference = elapsedTime!=null ? endTime-elapsedTime : endTime
     
     const [timeLeft, setTimeLeft] = useState<number>(difference)

@@ -53,12 +53,16 @@ body{
 }
 
 .timer_text{
+    display: flex;
     color:#ffffff;
-    font-size: 30px;   
+    font-size: 30px;
+    justify-content: center;
 }
 
 .other_text{
+    display: flex;
     color:#a2a4cb;
+    justify-content: center;
 }
 
 .timer_content{
