@@ -8,6 +8,9 @@ The `Timer` component renders a countdown timer with start, pause, and reset fun
 - **endTime** (`number`): The countdown time limit in seconds, with a maximum of 3599 seconds (1 hour). Exceeding this limit will throw an error.
 - **elapsedTime** (`number`, *optional*): The initial time elapsed, in seconds. If provided, the timer will start from this point; otherwise, it starts from 0.
 
+## Timer logic
+- Timer component comes with three buttons: Start, Pause and Reset. Each of them is linked to a certain function that sets their respected states. When `isStarted` state is changed, `useEffect` hook is triggered, which then checks the state of `isStarted` and according to it starts or stops timer ticking logic.
+  
 ## Component Structure and Styling
 
 - The timer includes a textual display of elapsed time (`elapsedTimeMinutes:elapsedTimeSeconds`) and time remaining (`minutesLeft:secondsLeft`).
