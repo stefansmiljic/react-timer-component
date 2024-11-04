@@ -45,6 +45,13 @@ body{
     margin-top: 40px;
 }
 
+.timer_controls button:hover
+{
+    border-color: #ffffff;
+    background-color: #606170;
+    transition: 0.3s;
+}
+
 .timer_text{
     color:#ffffff;
     font-size: 30px;   
